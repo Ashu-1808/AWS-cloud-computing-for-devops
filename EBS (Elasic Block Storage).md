@@ -11,3 +11,4 @@
 -Data is not deleted when instance is stopped or rebooted.
 -Network-attached storage.
 ```
+## EBS volume types
