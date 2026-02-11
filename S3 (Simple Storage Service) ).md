@@ -40,5 +40,6 @@ Here are your notes in **clean bullet format** 👇
    4. Applied at bucket level
 
 ```
+## Amazon S3 storage class:
 ![image alt](https://github.com/Ashu-1808/AWS-cloud-computing-for-devops/blob/e7cf2f64449efbdfff60d1468816ef30d1859d9f/storage%20class.webp)
 
