@@ -1,2 +1,18 @@
+EBS vs EFS vs S3 (Quick Comparison Table)
 
-![image alt](https://github.com/Ashu-1808/AWS-cloud-computing-for-devops/blob/cd39457fe0b0e742b91ea7196666a4d636afd7be/Storage%20in%20AWS/EBS%2CEFS%2CS3.png)
+| Feature                 | **EBS**                        | **EFS**                | **S3**                                |
+| ----------------------- | ------------------------------ | ---------------------- | ------------------------------------- |
+| **Storage Type**        | Block Storage                  | File Storage (NFS)     | Object Storage                        |
+| **Attach To**           | Single EC2 instance            | Multiple EC2 instances | Access via API/SDK/HTTP               |
+| **Availability**        | Single Availability Zone       | Multiple AZ (Regional) | Regional (Global access via internet) |
+| **Access Method**       | Mounted as disk                | Mounted as file system | Accessed via URL/API                  |
+| **Use Case**            | OS, Databases, Applications    | Shared file system     | Backup, Static files, Data lake       |
+| **Performance**         | Very high, low latency         | Scales with usage      | High throughput                       |
+| **Auto Scaling**        | Manual resize                  | Automatic scaling      | Automatic scaling                     |
+| **OS Support**          | Linux & Windows                | Linux only             | OS independent                        |
+| **Root Volume Support** | Yes                            | No                     | No                                    |
+| **Sharing**             | Cannot share (1 EC2 at a time) | Can share across EC2   | Accessible globally                   |
+| **Cost**                | Medium                         | High                   | Lowest                                |
+| **Best For**            | Boot disk & DB storage         | Shared app storage     | Unlimited storage & archive           |
+
+![image alt](https://github.com/Ashu-1808/AWS-cloud-computing-for-devops/blob/1aaf9e4bd3d1f33485bc888e6384938c05412a48/EBS%2CEFS%2CS3.png)
