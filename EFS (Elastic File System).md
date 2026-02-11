@@ -48,26 +48,21 @@ Step 5: Configure Security Group
    
 Step 6: Connect EC2 to EFS
 On each EC2:
-```
-sudo su -
-yum install amazon-efs-utils -y
-mkdir /efs
-```
+→ sudo su -
+→ yum install amazon-efs-utils -y
+→ mkdir /efs
+
 Mount EFS:
-```
-mount -t efs fs-xxxx:/ /efs
-```
+→ mount -t efs fs-xxxx:/ /efs
+
 Step 7: Test Shared Storage
----
-On EC2 in AZ1:
-```
-cd /efs
-touch demo.txt
-```
+→ On EC2 in AZ1
+→ cd /efs
+→ touch demo.txt
+
 Login to EC2 in AZ2 or AZ3:
-```
-cd /efs
-ls
+→ cd /efs
+→ ls
 ```
 You will see the same file ✅
 Final Flow of image
