@@ -61,13 +61,13 @@ While working on it you only work on Inbound Rule
 Default setting :
 Inbound rule : No Rule
 Outbound rule : Traffic allowed
-
 Source Type :
 You cannot block anyone but you can customize or add IP address which can access
  1.Anywhere : Everyone
  2.Custom : Can customize who can access
  3.My IP : Only owner
 ```
+![image alt](https://github.com/Ashu-1808/AWS-cloud-computing-for-devops/blob/f85cd1edf27a69f85e9e437c398329cb10ab0558/traffic.png)
 ## SSH (Secure Shell)
  ```
  -Network communication protocol used to connect EC2 instance remotely.
