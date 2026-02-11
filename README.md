@@ -43,11 +43,11 @@ allowing the hardware to be used more efficiently
 - Default region in AWS is North-Virginia (us-east-1)
 North Virginia has 6 zones
 
-- Region: A region is a different geographical area like apsouth, useast, uswest and all regions are
- isolated from each other
+- Region: A region is a different geographical area like apsouth, useast,
+ uswest and all regions are isolated from each other
 
-- Availability zone are physically separated data center within region and availability zone are
-also isolated from each other
+- Availability zone are physically separated data center within region
+and availability zone are also isolated from each other
 ```
 
 
