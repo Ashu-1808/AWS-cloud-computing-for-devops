@@ -70,18 +70,11 @@ You cannot block anyone but you can customize or add IP address which can access
 ```
 ## SSH (Secure Shell)
  ```
-Network communication protocol used to connect EC2 instance remotely.
- Used because communication between host and client is encrypted.
- Provides secure command-line access.
- Works on Port 22 (Linux).
- Security group changes apply immediately.
-```
-## RDP (Remote Desktop Protocol)
- ```
-Protocol that allows user to remotely access and control another computer.
- Mainly used to connect to Windows servers.
- Provides graphical desktop access.
- Works on Port 3389 (Windows).
+ -Network communication protocol used to connect EC2 instance remotely.
+ -Used because communication between host and client is encrypted.
+ -Provides secure command-line access.
+ -Works on Port 22 (Linux).
+ -Security group changes apply immediately.
 ```
 ## Steps to Connect Linux EC2 Instance (SSH)
 ```
@@ -94,6 +87,13 @@ Protocol that allows user to remotely access and control another computer.
  7.Copy the SSH command provided by AWS.
  8.Run the SSH command in terminal.
  9.Type yes (first time only).
+```
+## RDP (Remote Desktop Protocol)
+ ```
+ -Protocol that allows user to remotely access and control another computer.
+ - Mainly used to connect to Windows servers.
+ - Provides graphical desktop access.
+ - Works on Port 3389 (Windows).
 ```
 ##Steps to Connect Windows EC2 Instance (RDP)
  ```
