@@ -10,22 +10,22 @@
 ```
 ## Steps to Create EC2 Instance (AWS)
 ```
-1. Login to **AWS Management Console**.
-2. Go to **EC2 Dashboard**.
-3. Click **Launch Instance**.
-4. Enter **Instance Name**.
-5. Select **AMI (Operating System)**.
-6. Choose **Instance Type** (CPU & RAM).
-7. Select or Create **Key Pair**:
+1. Login to AWS Management Console.
+2. Go to EC2 Dashboard
+3. Click Launch Instance
+4. Enter Instance Name
+5. Select AMI (Operating System).
+6. Choose Instance Type (CPU & RAM).
+7. Select or Create Key Pair:
 Used for secure instance login.
  types:
    public Key – Stored in AWS.
    Private Key – Downloaded by use.
-8. Configure **Security Group** (Allow SSH/HTTP/HTTPS).
-9. Configure **Storage** (HDD/SSD size).
-10. Click **Launch Instance**.
+8. Configure Security Group (Allow SSH/HTTP/HTTPS).
+9. Configure Storage (HDD/SSD size).
+10. Click Launch Instance.
 
-→ **EC2 instance created successfully** ✅
+→ EC2 instance created successfully ✅
 
 ```
 ## Types of instance state:
@@ -178,8 +178,8 @@ Steps:
 ## **Nginx Web Server – Demo to Host Website on Ubuntu EC2**
 ```
 - Nginx is a web server used to host websites.
-- Service name in Ubuntu is **nginx**.
-- Works on **HTTP (80)** and **HTTPS (443)**.
+- Service name in Ubuntu is nginx.
+- Works on (HTTP (80) and HTTPS (443).
 
 Steps:
 
@@ -198,7 +198,7 @@ Steps:
    → `sudo systemctl status nginx`
 9. Create a sample webpage:
    → `echo "This is my website!" | sudo tee /var/www/html/index.html`
-10. Copy the **Public IP** and paste it in browser.
+10. Copy the Public IP and paste it in browser.
 
 → Website hosted successfully on Ubuntu EC2 using Nginx.
 
@@ -238,7 +238,7 @@ Steps:
 
 ## Instance Type (AWS EC2)
 ```
-Instance Types – Combination of **CPU, RAM, Storage & Networking capacity**.
+Instance Types – Combination of CPU, RAM, Storage & Networking capacity.
 
 1. General Purpose
  - Balanced CPU, memory & networking.
@@ -269,22 +269,22 @@ Instance Types – Combination of **CPU, RAM, Storage & Networking capacity**.
 ```
 A) On-Demand Instance
  - Pay only for what you use.
- - **Linux/Windows** → Per second billing (after first minute).
+ - Linux/Windows → Per second billing (after first minute).
  - Other OS → Per hour billing.
  - No upfront payment.
  - No long-term commitment.
  - Highest cost option.
  - Best for short-term workloads.
 
-B) Spot Instance**
- - Up to **90% cheaper** than On-Demand.
+B) Spot Instance
+ - Up to 90% cheaper than On-Demand.
  - Can be terminated anytime if spot price increases.
  - Cost-efficient option in AWS.
  - Best for fault-tolerant workloads (testing, data analysis, image processing).
  - Not suitable for critical jobs.
 
-C) Reserved Instance (RI)**
-  -Up to **75% cheaper** than On-Demand.
+C) Reserved Instance (RI)
+  -Up to 75% cheaper than On-Demand.
   - 1-year or 3-year commitment.
   -Payment Options:
     1. Zero Upfront – No initial payment.
@@ -297,7 +297,7 @@ D) Dedicated Host
   - Most expensive option.
 
 E) Savings Plans
-  - Up to **75% discount** compared to On-Demand.
+  - Up to 75% discount compared to On-Demand.
   - Commitment for 1 or 3 years (e.g., $5/hour usage).
   - Locked to specific instance family & region (e.g., t2 in ap-east-1).
   - Flexible across instance sizes (t2.nano, t2.medium).
