@@ -151,7 +151,7 @@ B.HTTPS (HyperText Transfer Protocol Secure)
 ```
 ## http or https webserver apache (httpd):
 ```
- Apache (httpd) Web Server – Demo to Host Website on EC2
+1. Apache (httpd) Web Server – Demo to Host Website on EC2
   -Apache is a web server used to host websites.
   -Service name in Linux is httpd.
   -Works on HTTP (80) and HTTPS (443).
@@ -172,7 +172,36 @@ Steps:
   → echo "This is my website!" > /var/www/html/index.html
 9.Copy the Public IP in browser.
 
-  Website hosted successfully on EC2 ✅
+  Website hosted successfully on EC2.
+```
+
+## **Nginx Web Server – Demo to Host Website on Ubuntu EC2**
+```
+- Nginx is a web server used to host websites.
+- Service name in Ubuntu is **nginx**.
+- Works on **HTTP (80)** and **HTTPS (443)**.
+
+Steps:
+
+1. Create an Ubuntu EC2 instance.
+2. Allow **HTTP (80)** and **HTTPS (443)** in Security Group.
+3. Connect to the instance using SSH.
+4. Update packages:
+   → `sudo apt update`
+5. Install Nginx:
+   → `sudo apt install nginx -y`
+6. Start Nginx service:
+   → `sudo systemctl start nginx`
+7. Enable Nginx at boot:
+   → `sudo systemctl enable nginx`
+8. Check service status:
+   → `sudo systemctl status nginx`
+9. Create a sample webpage:
+   → `echo "This is my website!" | sudo tee /var/www/html/index.html`
+10. Copy the **Public IP** and paste it in browser.
+
+→ Website hosted successfully on Ubuntu EC2 using Nginx.
+
 ```
 
 ## SSH Configuration Demo (Ubuntu EC2) – Simple Steps
