@@ -17,20 +17,17 @@
 ![image alt](https://github.com/Ashu-1808/AWS-cloud-computing-for-devops/blob/6370cb53b7f41d6a7f9b0a06679fcce2554971ca/EBS_Volume_Types.png)
 
 
-Here are **clean notes of EBS Snapshot** based on your notebook:
 
----
-
-# 📸 **EBS Snapshot Notes**
+## EBS Snapshot :
 ```
 What is EBS Snapshot?
-- EBS Snapshot is a **point-in-time backup** of an EBS volume.
-- It is an **incremental data backup**.
+- EBS Snapshot is a point-in-time backup of an EBS volume.
+- It is an incremental data backup.
 - Snapshots are stored in AWS (S3 managed storage).
 
 How Snapshot Works
-- First snapshot → **Full backup** (copies all data).
-- Next snapshots → **Copies only changed blocks** since last snapshot.
+- First snapshot → Full backup (copies all data).
+- Next snapshots → Copies only changed blocks since last snapshot.
 - Saves storage space and cost.
 
 Example:
@@ -40,10 +37,10 @@ Example:
  -Snapshot 3 → Only new changes (e.g., E)
 
 Important Points
-- Any data written after snapshot starts → **Not included**.
-- Volumes are **Availability Zone specific**.
-- Snapshots are **Region specific**.
-- Snapshot can be used to create a **new volume**.
+- Any data written after snapshot starts → Not included.
+- Volumes are Availability Zone specific.
+- Snapshots are Region specific.
+- Snapshot can be used to create a new volume.
 - Snapshot can be copied to another region.
 
 Limits (Default)
@@ -52,32 +49,32 @@ Limits (Default)
 ```
 ## 📸 **EBS Snapshot Creation – How We Do It (Refer Image Concept)**
 
-*(Image shows: Volume → Snapshot 1 → Snapshot 2 → Snapshot 3 = Incremental backup)*
+![image alt](https://github.com/Ashu-1808/AWS-cloud-computing-for-devops/blob/f898c23ea9822512b67c9a5eb74a1f2e88f9de51/download.png)
 
 ---
 
 ## Steps to Create EBS Snapshot
 ```
-1. Go to **AWS Management Console**
+1. Go to AWS Management Console
 
-2. Navigate to **EC2 Dashboard**
+2. Navigate to EC2 Dashboard
 
-3. Click on **Volumes**
+3. Click on Volumes
 
 4. Select the volume you want to backup
 
-5. Click **Actions → Create Snapshot**
+5. Click Actions → Create Snapshot
 
-6. Provide **Description**
+6. Provide Description
 
-7. (Optional) Select **Encryption / KMS key**
+7. (Optional) Select Encryption / KMS key
 
-8. Click **Create Snapshot**
+8. Click Create Snapshot
+
+ After Creation
+  - Go to **Snapshots section**
+  - Status will show **Pending → Completed**
 ```
-After Creation
-- Go to **Snapshots section**
-- Status will show **Pending → Completed**
-
 Important (As shown in image)
 ```
 - First snapshot → Full backup
@@ -86,13 +83,27 @@ Important (As shown in image)
 - Stored in AWS (S3 managed storage)
 - Incremental → Saves storage cost
 ```
+## EBS migration:
+```
+- Volumes are **Availability Zone specific**.
+- Snapshots are **Region specific**.
+- Snapshot is required to move volume across regions.
+- Data remains intact during migration.
+```
+ Process Flow (Simple Diagram Format)
+```
+EBS Volume (Mumbai)
+        ↓
+Create Snapshot
+        ↓
+Copy Snapshot to Hyderabad
+        ↓
+Create Volume from Snapshot
+        ↓
+Attach to EC2 (Hyderabad)
+```
 
-
-
-
-
-
-
+![image alt](https://github.com/Ashu-1808/AWS-cloud-computing-for-devops/blob/f898c23ea9822512b67c9a5eb74a1f2e88f9de51/download%20(1).png)
 ## EBS Migration – Moving EBS Volume from One Region to Another:
 ```
 To move EBS from one AZ/Region:
@@ -124,29 +135,4 @@ Steps:
 14.Attach volume to EC2 instance.
 
 ```
-
-## 🔹 Important Notes
-```
-- Volumes are **Availability Zone specific**.
-- Snapshots are **Region specific**.
-- Snapshot is required to move volume across regions.
-- Data remains intact during migration.
-```
-
-### 📊 Process Flow (Simple Diagram Format)
-
-```
-EBS Volume (Mumbai)
-        ↓
-Create Snapshot
-        ↓
-Copy Snapshot to Hyderabad
-        ↓
-Create Volume from Snapshot
-        ↓
-Attach to EC2 (Hyderabad)
-```
-
----
-
 
