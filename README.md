@@ -45,7 +45,7 @@ Cloud computing is on demand delivery of compute power, database and other resou
 -allowing the hardware to be used more efficiently.
 ```
 
-## About AWS
+## About AWS :
 ```
 - Nitro Hypervisor used by AWS before they used XEN.
 - Default region in AWS is North-Virginia (us-east-1)
