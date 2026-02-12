@@ -43,6 +43,8 @@
 
 ---
 
+![image alt](https://github.com/Ashu-1808/AWS-cloud-computing-for-devops/blob/4498e13f3283fcf18026dfb4c60dfee9cf33f2e2/Lambda%20.png)
+---
 ##  Lambda Function
 1. The code you upload to AWS Lambda is called a **Lambda Function**.
 2. It runs only when triggered by an event.
