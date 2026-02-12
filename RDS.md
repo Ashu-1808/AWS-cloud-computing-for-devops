@@ -186,6 +186,7 @@ Table
      - select * from users;
 ```
 
+![image alt](https://github.com/Ashu-1808/AWS-cloud-computing-for-devops/blob/22e7f77989e684b055795ac1968a37866ccbb3f6/RDS-Architecture.png)
 ```
 While doing this:
  - We need to install java's updated version, because while installing apt may install the        previous version.
