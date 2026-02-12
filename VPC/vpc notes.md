@@ -34,7 +34,7 @@ Types of VPC → 1. Default VPC
 | Control          | Less control                                | Full control over networking     |
 | Use Case         | Quick testing, simple setups                | Production, secure architectures |
 
-
+![https://github.com/Ashu-1808/AWS-cloud-computing-for-devops/blob/2276e5c262a573d4ad8f9a7766f131d8bbdc1938/VPC/NACL%26SC-GROUP.png)
 ## Steps to Create VPC
 ```
 1. Create VPC
