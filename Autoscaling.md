@@ -38,7 +38,7 @@
 | Complessità        | Più semplice da gestire                                   | Più complesso (load balancer, sync)    |
 | Ideale per         | Carichi prevedibili, app piccole                          | Traffico variabile, sistemi enterprise |
 
-![image alt](https://github.com/Ashu-1808/AWS-cloud-computing-for-devops/blob/6bec3543f551d01b5de4dfa6f00549d0bd9cff17/Autoscaling%20architecture.png)
+
 
 ## Steps To create Auto Scaling
 
