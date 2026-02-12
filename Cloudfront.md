@@ -91,13 +91,5 @@ Here are your **CloudFront notes** written cleanly and clearly from the image �
 * Enhanced security
 
 ---
-
-If you want, I can also provide:
-
-* 📊 Architecture diagram
-* 🖼️ Clean handwritten-style notes
-* 📄 One-page quick revision sheet
-* 🎯 Interview Q&A for CloudFront
-
-Tell me what you prefer.
+.
 
