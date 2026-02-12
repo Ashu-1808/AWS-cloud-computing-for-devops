@@ -23,7 +23,7 @@ There are 3 types:
 ---
 
 ![image alt](https://github.com/Ashu-1808/AWS-cloud-computing-for-devops/blob/a3875bef452015f8d03c8b45c4bf966567ca96c0/cluster.png)
-
+---
 
 #1. Cluster Placement Group
  Concept
@@ -55,7 +55,7 @@ There are 3 types:
 
 ![image alt](https://github.com/Ashu-1808/AWS-cloud-computing-for-devops/blob/a3875bef452015f8d03c8b45c4bf966567ca96c0/spread.png)
 
-2. Spread Placement Group
+#2. Spread Placement Group
  Concept
   1. Instances are placed on **separate hardware**
   2. Each instance is isolated
@@ -81,7 +81,7 @@ There are 3 types:
 ![image alt](https://github.com/Ashu-1808/AWS-cloud-computing-for-devops/blob/a3875bef452015f8d03c8b45c4bf966567ca96c0/partition.png)
 
 
-3.Partition Placement Group
+#3.Partition Placement Group
  Concept
   1. Instances are divided into **multiple partitions**
   2. Each partition is on separate hardware racks
