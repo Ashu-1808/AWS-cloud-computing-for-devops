@@ -1,0 +1,360 @@
+
+# R53........(Networking)
+
+## Port 53
+
+### DNS → Routing
+
+* **53 → It works on Port No 53**
+* **Route 53** is a highly available & scalable DNS (Domain Name System) web service from AWS.
+* Domain is used to convert domain name to IP address.
+
+---
+
+## How can use Route 53?
+
+1. Transfer existing domain
+2. Register new domain
+3. Route traffic for domain
+4. Perform health check for your resources
+
+* **Route 53 is a global service**
+
+---
+
+## Types of TLD
+
+1. Generic Level Domain
+2. Geographic Level Domain / Country code domain
+
+Example:
+abc.com → .com is TLD
+
+---
+
+## DNS Flow Diagram Explanation
+
+User
+↓
+[www.abc.com](http://www.abc.com)
+↓
+Internet
+↓
+DNS resolver / server
+abc: 10.10.10.10
+
+---
+
+### DNS Hierarchy
+
+Root server (.com, .in, etc)
+↓
+TLD (Top Level Domain) – .com
+↓
+Name server
+
+---
+
+## Hosted Zone
+
+* Hosted zone is a container for records.
+* Records contain info for how you want to route traffic for specific domain.
+
+---
+Here are your notes written **as it is** from the second image:
+
+---
+
+# In AWS there are two top level domain
+
+### Generic level domain
+
+* .com, .org, .net, .edu
+
+### Geographical level domain
+
+* .in, .us, .cn
+
+---
+
+# Steps to configure Route-53
+
+1. First you need to register a domain
+   (It can be on R53 or another DNS register)
+
+2. Create a hosted zone on route53 then it can be done automatically.
+   If you register your domain from route53, otherwise you have to create hosted zone manually.
+
+3. Inside the hosted zone you need to create record set.
+
+---
+
+# Hosted zone
+
+Hosted zone is a container of records
+eg: ediblitz.edmingte.com/v3/myaccount
+
+---
+
+# Types of Hosted zone
+
+### 1) Public Hosted zone:
+
+It contains how you want to route the traffic on internet
+
+### 2) Private Hosted zone:
+
+It contains records that specifies how you want to route traffic to VPC
+
+---
+Here are your notes written **as it is** from the third image:
+
+---
+
+* Always remember NS record will be created
+* SOA record is nothing but details of your domain
+* NS records is responsible for resolving your domain
+
+---
+
+# Records:
+
+Record tells DNS where to route the traffic
+for a domain or subdomain
+
+---
+
+# Record types
+
+### 1) A Record →
+
+Maps a domain name to an IPv4 address
+eg: google.com → 8.8.8.8
+
+---
+
+### 2) AAAA Record →
+
+Maps a domain name to an IPv6 address
+
+---
+
+### 3) CNAME Record →
+
+Maps one domain name to another domain name
+[www.google.com](http://www.google.com) → google.com
+
+---
+
+### 4) MX Records →
+
+Routes emails to server
+example.com → mail.example.com
+
+---
+
+### 5) TXT Records →
+
+Stores text information. Used for domain verification
+Improves email security
+
+---
+
+### 6) NS Records →
+
+Specifies authoritative DNS server
+Automatically created for Hosted zones
+
+---
+
+### 7) SOA Records (Start of Authority) →
+
+Contains administrative information of Domain
+Automatically created by Route53
+
+---
+
+### 8) Alias Record (AWS specific) →
+
+AWS extension to DNS
+Points a domain to ELB, CloudFront, API Gateway
+S3 website.
+
+---
+Here are your notes written **as it is** from the image:
+
+---
+
+Health check available = ✓
+Health check not available = ✗
+
+---
+
+# Types of Routing policies in Route53
+
+---
+
+## 1) Simple Routing policy:
+
+**Concept →** Maps a domain to one resource
+
+* No health check happens
+* Returns single DNS answer
+
+**Characteristic →**
+
+* Only one record is created
+* Cannot do failover
+* Simplest configuration
+
+**Use case →**
+
+* Dev/Test environments
+* For single EC2 or Load Balancer
+
+**Eg →** example.com → 54.543.37.10
+
+---
+
+## 2) Weighted Routing Policy:
+
+**Concept →** Distributes traffic based on assigned weights
+
+* Weight value = relative traffic share
+
+**Characteristics →**
+
+* Supports multiple records
+* Weights ranges 0 to 255
+* Can be used with health checks
+
+**Use case →**
+
+* Blue-Green deployment
+* A/B testing, Canary release
+
+**Eg →**
+Version A → weight 80 (80%)
+Version B → weight 20 (20%)
+
+---
+
+## 3) Latency-Based Routing Policy:
+
+**Concept →** Routes users to lowest latency AWS region
+
+* AWS measures network latency automatically
+
+**Characteristics →**
+
+* Region based routing
+* Improves performance for global users
+* No manual latency values required
+
+**Use case →**
+
+* Global applications
+* Multi-region deployments
+
+**Eg →**
+User in India → ap-south-1
+User in USA → us-east-1
+
+---
+Here are your notes written **as it is** from the image:
+
+---
+
+## 4) Failover Routing Policy:
+
+**Concept →** Routes traffic to primary resources
+
+* If primary fails then it goes to secondary
+
+**Characteristics →**
+
+* Requires Route53 health checks
+* Two record only (Primary & Secondary)
+
+**Use cases →**
+
+* Disaster Recovery (DR)
+* High availability architecture
+
+**Eg →**
+Primary → ALB (Mumbai)
+Secondary → ALB (Singapore)
+
+---
+
+## 5) Geo Location Routing Policy:
+
+**Concept →** Routes traffic based on users geographic location
+
+* Based on country/continent
+
+**Characteristics →**
+
+* You define location rules
+* Supports default route
+* Does not consider latency
+
+**Use cases →**
+
+* Legal compliance (country specific service)
+* Content localization
+
+**Eg →**
+IND → IN servers
+EUROPE → EU servers
+Others → Default
+
+---
+
+## 6) Geo Proximity Routing Policy:
+
+**Concept →** Routes traffic based on geographic distance
+
+* Allows bias to shift traffic
+
+**Characteristics →**
+
+* Routes traffic close/farther
+* Bias lets you move traffic closer/farther
+* More advanced than geolocation
+
+**Use cases →**
+
+* Fine-grained traffic control
+* Gradual regional traffic migration
+
+**Eg →**
+-10 → reduce traffic
++30 → attract more traffic
+
+---
+Here are your notes written **as it is** from the image:
+
+---
+
+## 7) Multi-value answer routing policy:
+
+**Concept →** Returns multiple healthy IP addresses
+
+* Client choose one IP randomly
+
+**Characteristics →**
+
+* Supports health checks
+* Simple DNS level load balancing
+* Not a replacement for ELB
+* Fault tolerance
+* Small-scale load distribution
+
+**Use cases →**
+
+**Eg →**
+example.com → [IP1, IP2, IP3, IP4]
+
+---
+an convert everything into **clean DevOps interview-ready notes** in structured format.
