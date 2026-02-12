@@ -15,7 +15,7 @@
 ```
 
 
-# 🖥 DHCP (Dynamic Host Configuration Protocol)
+## DHCP (Dynamic Host Configuration Protocol)
 ```
 Types of VPC → 1. Default VPC
                2. Custom VPC
