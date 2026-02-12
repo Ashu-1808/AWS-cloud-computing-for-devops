@@ -22,7 +22,6 @@ There are 3 types:
 
 ---
 
-![image alt](https://github.com/Ashu-1808/AWS-cloud-computing-for-devops/blob/a3875bef452015f8d03c8b45c4bf966567ca96c0/cluster.png)
 ---
 
 #1. Cluster Placement Group
@@ -53,8 +52,8 @@ Concept
   ❌ If rack fails → multiple instances affected
 
 ```
+![image alt](https://github.com/Ashu-1808/AWS-cloud-computing-for-devops/blob/a3875bef452015f8d03c8b45c4bf966567ca96c0/cluster.png)
 
-![image alt](https://github.com/Ashu-1808/AWS-cloud-computing-for-devops/blob/a3875bef452015f8d03c8b45c4bf966567ca96c0/spread.png)
 
 #2. Spread Placement Group
  ```
@@ -78,9 +77,8 @@ Concept
  ❌ Limited instances per AZ
 
 ```
+![image alt](https://github.com/Ashu-1808/AWS-cloud-computing-for-devops/blob/a3875bef452015f8d03c8b45c4bf966567ca96c0/spread.png)
 
-
-![image alt](https://github.com/Ashu-1808/AWS-cloud-computing-for-devops/blob/a3875bef452015f8d03c8b45c4bf966567ca96c0/partition.png)
 
 
 #3.Partition Placement Group
@@ -105,6 +103,7 @@ Concept
   ✔ Balance of performance + fault tolerance
   ✔ Best for distributed systems (Hadoop, Kafka)
 ```
+![image alt](https://github.com/Ashu-1808/AWS-cloud-computing-for-devops/blob/a3875bef452015f8d03c8b45c4bf966567ca96c0/partition.png)
 
 # 🔥 Quick Comparison Table
 
