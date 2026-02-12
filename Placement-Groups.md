@@ -22,7 +22,7 @@ There are 3 types:
 
 ---
 
----
+
 
 #1. Cluster Placement Group
  ```
@@ -54,7 +54,7 @@ Concept
 ```
 ![image alt](https://github.com/Ashu-1808/AWS-cloud-computing-for-devops/blob/a3875bef452015f8d03c8b45c4bf966567ca96c0/cluster.png)
 
-
+---
 #2. Spread Placement Group
  ```
 Concept
@@ -79,7 +79,7 @@ Concept
 ```
 ![image alt](https://github.com/Ashu-1808/AWS-cloud-computing-for-devops/blob/a3875bef452015f8d03c8b45c4bf966567ca96c0/spread.png)
 
-
+---
 
 #3.Partition Placement Group
  ```
@@ -105,7 +105,8 @@ Concept
 ```
 ![image alt](https://github.com/Ashu-1808/AWS-cloud-computing-for-devops/blob/a3875bef452015f8d03c8b45c4bf966567ca96c0/partition.png)
 
-# 🔥 Quick Comparison Table
+---
+##  Quick Comparison Table
 
 | Type      | Performance | Fault Tolerance | Best For            |
 | --------- | ----------- | --------------- | ------------------- |
