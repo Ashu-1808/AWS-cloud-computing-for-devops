@@ -18,39 +18,36 @@
   upto 200 target
 ```
 ![image alt](https://github.com/Ashu-1808/AWS-cloud-computing-for-devops/blob/e51ee856ba0aef781144e97fa634ad1ef3533079/1741338423279.gif)
-## Types of Load Balancer:
 ```
+Types of Load Balancer:
 1. Application Load Balancer (ALB)
-
-- Works at: OSI Layer 7 (HTTP/HTTPS)
-- Feature: Supports microservices and containers
+ - Works at: OSI Layer 7 (HTTP/HTTPS)
+ - Feature: Supports microservices and containers
   SSL/TLS termination, Native integration with ECS, EKS
-- Use when: ALB is best for smart routing at the application layer, REST APIs
+ - Use when: ALB is best for smart routing at the application layer, REST APIs
 
 2. Network Load Balancer (NLB)
-
-- Works at: OSI Layer 4 (TCP, UDP, TLS)
-- Feature: Handle millions of requests per second
+ - Works at: OSI Layer 4 (TCP, UDP, TLS)
+ - Feature: Handle millions of requests per second
   Low latency, Static IP support, ideal for non HTTP traffic
-- Used when: NLB is for speed, scale and low latency
+ - Used when: NLB is for speed, scale and low latency
   (Database/messaging), TCP/UDP
   High performance workload
   Real-Time systems
 
 3. Classic Load Balancer (CLB) (Legacy)
-- Works at: OSI Layer 4 / Basic Layer 7
-- Feature: Older generation, limited routing capacity
-- Used for: Maintaining legacy system only
-- Note: Not for new application
+ - Works at: OSI Layer 4 / Basic Layer 7
+ - Feature: Older generation, limited routing capacity
+ - Used for: Maintaining legacy system only
+ - Note: Not for new application
 
 4. Gateway Load Balancer (GLB)
-- Works at: OSI Layer 3/4 (Network traffic inspection)
-- Feature: Designed for security application
+ - Works at: OSI Layer 3/4 (Network traffic inspection)
+ - Feature: Designed for security application
   Integrate with firewalls, IDS/IPS
-- Used at: GLB is for security, not web traffic
+ - Used at: GLB is for security, not web traffic
   Firewall security, Centralized network security
-```
-```
+
 ELB Advantages:
  1. High Availability
  2. Health checks → No downtime
@@ -64,11 +61,10 @@ ELB Disadvantages:
  3. Limited control → less tuning
  4. Limits → Depends on ELB type
 
-```
 
-## Health Checks
-```
-Health checks: they determine whether a target is healthy and able to receive traffic
+
+Health Checks :
+They determine whether a target is healthy and able to receive traffic
 1. Healthy threshold:
   No. of consecutive successful health checks required before target is marked healthy
   Eg: If healthy threshold is 3 → then target must pass 3 continuous checks
