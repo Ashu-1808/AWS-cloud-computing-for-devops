@@ -34,7 +34,7 @@ How Snapshot Works
 
 Example:
  -Original Volume → A B C D E
- -Snapshot 1 → A B C D E   (Full)
+ -Snapshot 1 → A B   (Full)
  -Snapshot 2 → Only changed blocks (e.g., C D)
  -Snapshot 3 → Only new changes (e.g., E)
 
@@ -50,8 +50,7 @@ Limits (Default)
 - Up to -10,000 snapshots- per region.
 ```
 ## EBS Snapshot Creation –
-
-![image alt](https://github.com/Ashu-1808/AWS-cloud-computing-for-devops/blob/f898c23ea9822512b67c9a5eb74a1f2e88f9de51/download.png)
+[image alt]!(https://github.com/ashu-1808/AWS/blob/f898c23ea9822512b67c9a5eb74a1f2e88f9de51/download.png)
 Important (As shown in image)
 ```
 - First snapshot → Full backup
