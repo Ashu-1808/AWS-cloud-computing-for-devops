@@ -12,4 +12,3 @@
 
 
 
-![image alt](https://github.com/Ashu-1808/AWS-cloud-computing-for-devops/blob/1aaf9e4bd3d1f33485bc888e6384938c05412a48/EBS%2CEFS%2CS3.png)
